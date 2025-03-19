@@ -1,33 +1,9 @@
 ﻿using MathGame.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace MathGame;
 
 internal class Helper
 {
-    internal static List<Game> games = new()
-    {
-        new Game{ Date = DateTime.Now.AddDays(1), Type = GameType.Addition, Score = 5 },
-        new Game{ Date = DateTime.Now.AddDays(2), Type = GameType.Addition, Score = 1 },
-        new Game{ Date = DateTime.Now.AddDays(3), Type = GameType.Subtraction, Score = 2 },
-        new Game{ Date = DateTime.Now.AddDays(4), Type = GameType.Addition, Score = 3 },
-        new Game{ Date = DateTime.Now.AddDays(5), Type = GameType.Addition, Score = 4 },
-        new Game{ Date = DateTime.Now.AddDays(6), Type = GameType.Division, Score = 5 },
-        new Game{ Date = DateTime.Now.AddDays(7), Type = GameType.Subtraction, Score = 5 },
-        new Game{ Date = DateTime.Now.AddDays(8), Type = GameType.Addition, Score = 2 },
-        new Game{ Date = DateTime.Now.AddDays(9), Type = GameType.Multioplication, Score = 5 },
-        new Game{ Date = DateTime.Now.AddDays(10), Type = GameType.Multioplication, Score = 5 },
-        new Game{ Date = DateTime.Now.AddDays(11), Type = GameType.Addition, Score = 3 },
-        new Game{ Date = DateTime.Now.AddDays(12), Type = GameType.Addition, Score = 5 },
-        new Game{ Date = DateTime.Now.AddDays(13), Type = GameType.Division, Score = 4 },
-        new Game{ Date = DateTime.Now.AddDays(14), Type = GameType.Addition, Score = 5 },
-        new Game{ Date = DateTime.Now.AddDays(15), Type = GameType.Division, Score = 3 },
-    };
-
+    internal static List<Game> games = new();
     internal static void QuitGame()
     {
         Console.WriteLine("Quit selected");
@@ -42,7 +18,7 @@ internal class Helper
         Console.WriteLine("Games History");
         Console.WriteLine("-----------------------------------");
 
-        foreach (var game in gamesToPrint)
+        foreach (var game in games)
         {
             Console.WriteLine($"{game.Date} - {game.Type}: {game.Score}pts");
         }
