@@ -13,7 +13,6 @@ internal class Helper
 
     internal static void GetGames()
     {
-        var gamesToPrint = games.Where(x => x.Type == GameType.Addition).OrderByDescending(x => x.Score);
         Console.Clear();
         Console.WriteLine("Games History");
         Console.WriteLine("-----------------------------------");

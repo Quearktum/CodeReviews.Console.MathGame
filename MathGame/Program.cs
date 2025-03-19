@@ -8,7 +8,6 @@ internal class Program
         var date = DateTime.Now;
 
         var menu = new Menu();
-        var games = new List<string>();
 
         menu.Init(name, date);
     }
